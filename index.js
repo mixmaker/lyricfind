@@ -31,5 +31,20 @@ const getLyrics = async (searchQuery) => {
     }
   }
 };
-const LyricFind = { getLyrics, fetchFromGaana };
+
+const lyricsFromGaana = async (searchQuery) => {
+  if (!searchQuery || searchQuery === "") return "Query cannot be empty";
+  const browser = await puppeteer.launch({ headless: false });
+  const page = await browser.newPage();
+  const query = `${searchQuery} lyrics gaana.com`;
+  try {
+    await page.goto(`https://google.com/search?q=${query}`);
+    const gaanaLyr = await fetchFromGaana(page);
+    await browser.close();
+    return gaanaLyr;
+  } catch (e) {
+    return e.message;
+  }
+};
+const LyricFind = { getLyrics, lyricsFromGaana };
 module.exports = LyricFind;

@@ -1,0 +1,27 @@
+{
+  "name": "lyricfind",
+  "version": "1.0.0",
+  "description": "A helper package to get lyrics of any song by scraping google and gaana.com",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mixmaker/lyricfind.git"
+  },
+  "keywords": [
+    "nodeJS",
+    "lyrics",
+    "lyricfind"
+  ],
+  "author": "mixmaker",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mixmaker/lyricfind/issues"
+  },
+  "homepage": "https://github.com/mixmaker/lyricfind#readme",
+  "dependencies": {
+    "puppeteer": "^14.3.0"
+  }
+}

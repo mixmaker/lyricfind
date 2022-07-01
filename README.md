@@ -1,4 +1,4 @@
-
+[![🚀 publish](https://github.com/mixmaker/lyricfind/actions/workflows/publish.yml/badge.svg)](https://github.com/mixmaker/lyricfind/actions/workflows/publish.yml)
 # Lyricfind
 
 Find lyrics of any song on the go...

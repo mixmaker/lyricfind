@@ -3,7 +3,7 @@ const fetchFromGaana = require("./gaana");
 
 const getLyrics = async (searchQuery) => {
   if (!searchQuery || searchQuery === "") return "Query cannot be empty";
-  const browser = await puppeteer.launch({ headless: false });
+  const browser = await puppeteer.launch();
   const page = await browser.newPage();
   const query = `${searchQuery} lyrics`;
   try {
